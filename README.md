@@ -34,18 +34,18 @@ To start the assistant, run the python file and enjoy!
 `Human: Hey Jarvis, shut down/log off/restart my pc.`
 
 ## Libaries required to be installed via Pip
-```- request  
+- request  
 - Speech recognition  
 - Pyttsx3  
 - Wikipedia  
-- Wolfram Aplha```
+- Wolfram Aplha
 
 ## In-built libaries to be imported
-`- os
+- os
 - datetime
 - web browser
 - Json
-- time`
+- time
 
 ## Third party services used
 Open weather map
