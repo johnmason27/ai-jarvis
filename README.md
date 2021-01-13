@@ -3,7 +3,7 @@ Voice assistant for automating tasks. University project for my final project.
 Allows you to talk via voice to the assistant and perform a range of tasks.
 
 <p align="center">
-  <img width="200" src="http://material-bread.org/logo-shadow.svg" alt="Material Bread logo">
+  <img width="200" src="speech.gif" alt="Material Bread logo">
 </p>
                            
 ## Usage
