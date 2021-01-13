@@ -1,7 +1,8 @@
 # ai-jarvis
 Voice assistant for automating tasks. University project for my final project.
 Allows you to talk via voice to the assistant and perform a range of tasks.
-<p>![Computer Speech](speech.gif)</p>
+<img src="speech.gif" alt="Computer Speech />
+                           
 ## Usage
 To start the assistant, run the python file and enjoy!
 
