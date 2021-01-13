@@ -21,6 +21,7 @@ if __name__ == "__main__":
     while True:
         assistant.speak("Tell me how I help you now?")
         statement = assistant.take_command().lower()
+        
         if statement == 0:
             continue
 

@@ -18,6 +18,7 @@ class ApiCallService:
         complete_url = self.weather_api_url + "appid=" + self.weather_api_key + "&q=" + city_name
         response = requests.get(complete_url)
         response_dic = response.json()
+
         if response_dic["cod"] != "404":
             data = response_dic["main"]
             current_temperature = data["temp"]
@@ -30,12 +31,14 @@ class ApiCallService:
         else:
             self.assistant.speak("Failed to fetch weather data.")
             print("Failed to fetch weather data.")
+
         time.sleep(1)
 
     def call_wolframalpha(self):
         self.assistant.speak("I can answer to computational and geographical questions and what question do you want to ask now?")
         print("I can answer to computational and geographical questions and what question do you want to ask now?")
         question = self.assistant.take_command()
+
         try:
             client = wolframalpha.Client(self.wolframalpha_api_key)
             res = client.query(question)
@@ -45,4 +48,5 @@ class ApiCallService:
         except Exception:
             self.assistant.speak("Failed to fetch response.")
             print("Failed to fetch response.")
+            
         time.sleep(1)

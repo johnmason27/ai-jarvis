@@ -14,6 +14,7 @@ class Assistant:
     
     def wish_me(self):
         hour = datetime.datetime.now().hour
+
         if hour >= 0 and hour < 12:
             self.speak("Hello, Good Morning")
             print("Hello, Good Morning")
@@ -26,6 +27,7 @@ class Assistant:
 
     def take_command(self):
         r = sr.Recognizer()
+
         with sr.Microphone() as source:
             print("Listening...")
             audio = r.listen(source)
@@ -33,8 +35,8 @@ class Assistant:
             try:
                 statement = r.recognize_google(audio, language="en-in")
                 print(f"User said: {statement}\n")
-
             except Exception:
                 self.speak("Excuse me, I didn't catch that, please repeat what you said.")
                 return "None"
+                
             return statement
