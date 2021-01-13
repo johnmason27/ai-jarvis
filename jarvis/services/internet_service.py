@@ -1,11 +1,15 @@
 import webbrowser
 import time
 import wikipedia
+from assistant_logic.assistant import Assistant
 
 class InternetService:
+    def __init__(self):
+        self.assistant = Assistant()
+
     def open_tab(self, url, website_name):
         webbrowser.open_new_tab(url)
-        speak(f"{website_name} is open now")
+        self.assistant.speak(f"{website_name} is open now")
         print(f"{website_name} is open now")
         time.sleep(1)
     
@@ -19,20 +23,20 @@ class InternetService:
             else:
                 search_query += "+" + statement[x]
         webbrowser.open_new_tab(f"https://www.bing.com/search?q={search_query}")
-        speak("Website is open")
+        self.assistant.speak("Website is open")
         print("Website is open")
         time.sleep(1)
 
     def search_wikipedia(self, statement):
-        speak("Searching Wikipedia...")
+        self.assistant.speak("Searching Wikipedia...")
         print("Searching Wikipedia...")
         try:
             statement = statement.replace("wikipedia", "")
             results = wikipedia.summary(statement, sentences = 3)
-            speak("According to Wikipedia")
+            self.assistant.speak("According to Wikipedia")
             print(results)
-            speak(results)
+            self.assistant.speak(results)
         except Exception:
-            speak("That Wikipedia page couldn't be found")
+            self.assistant.speak("That Wikipedia page couldn't be found")
             print("That Wikipedia page couldn't be found")
         time.sleep(1)
