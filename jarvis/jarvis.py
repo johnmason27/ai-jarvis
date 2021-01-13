@@ -9,6 +9,8 @@ import wolframalpha
 import json
 import requests
 
+from services.internet_service import InternetService
+
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
 engine.setProperty("voice", "voices[1].id")
@@ -52,6 +54,8 @@ print("Loading your AI personal assistant Jarvis")
 speak("Loading your AI personal assistant Jarvis")
 wish_me()
 
+internet_service = InternetService()
+
 if __name__ == "__main__":
     while True:
         speak("Tell me how I help you now?")
@@ -65,64 +69,26 @@ if __name__ == "__main__":
             break
 
         if "wikipedia" in statement:
-            speak("Searching Wikipedia...")
-            print("Searching Wikipedia...")
-            try:
-                statement = statement.replace("wikipedia", "")
-                results = wikipedia.summary(statement, sentences = 3)
-                speak("According to Wikipedia")
-                print(results)
-                speak(results)
-            except Exception:
-                speak("That Wikipedia page couldn't be found")
-                print("That Wikipedia page couldn't be found")
-            time.sleep(1)
+            internet_service.search_wikipedia(statement)
         elif "open youtube" in statement:
-            webbrowser.open_new_tab("https://www.youtube.com")
-            speak("YouTube is open now")
-            print("YouTube is open now")
-            time.sleep(1)
+            internet_service.open_tab("https://www.youtube.com", "YouTube")
         elif "open google" in statement:
-            webbrowser.open_new_tab("https://www.google.com")
-            speak("Google is open now")
-            print("Google is open now")
-            time.sleep(1)
+            internet_service.open_tab("https://www.google.com", "Google")
         elif "open outlook" in statement:
-            webbrowser.open_new_tab("https://outlook.office.com/mail/inbox")
-            speak("Outlook is open now")
-            print("Outlook is open now")
-            time.sleep(1)
+            internet_service.open_tab("https://outlook.office.com/mail/inbox", "Outlook")
         elif "open github" in statement:
-            webbrowser.open_new_tab("https://github.com")
-            speak("Github is open now")
-            print("Github is open now")
-            time.sleep(1)
+            internet_service.open_tab("https://github.com", "Github")
         elif "open stackoverflow" in statement:
-            webbrowser.open_new_tab("https://stackoverflow.com")
-            speak("Stackoverflow is now open")
-            print("Stackoverflow is now open")
-            time.sleep(1)
+            internet_service.open_tab("https://stackoverflow.com", "Stackoverflow")
         elif "time" in statement:
             current_time = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"The time is {current_time}")
             print(f"The time is {current_time}")
             time.sleep(1)
         elif "news" in statement:
-            webbrowser.open_new_tab("https://www.bbc.co.uk/news")
-            speak("BBC News is now open")
-            print("BBC News is now open")
-            time.sleep(1)
+            internet_service.open_tab("https://www.bbc.co.uk/news", "BBC News")
         elif "search" in statement:
-            statement = statement.replace("search", "")
-            search_query = ""
-            statement = statement.split()
-            for x in range(len(statement)):
-                if x == 0:
-                    search_query += statement[x]
-                else:
-                    search_query += "+" + statement[x]
-            webbrowser.open_new_tab(f"https://www.bing.com/search?q={search_query}")
-            time.sleep(1)
+            internet_service.search_web(statement)
         elif "who made you" in statement or "who created you" in statement:
             speak("I was developed by John")
             print("I was developed by John")
