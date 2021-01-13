@@ -35,25 +35,27 @@ To start the assistant, run the python file and enjoy!
 
 ## Libaries required to be installed via Pip
 ```
-- request  
-- Speech recognition  
-- Pyttsx3  
-- Wikipedia  
-- Wolfram Aplha
+1. request  
+2. Speech recognition  
+3. Pyttsx3  
+4. Wikipedia  
+5. Wolfram Aplha
 ```
 
 ## In-built libaries to be imported
 ```
-- os
-- datetime
-- web browser
-- Json
-- time
+1. os
+2. datetime
+3. web browser
+4. Json
+5. time
 ```
 
 ## Third party services used
-Open weather map  
-WolframAplha
+```
+Open weather map - Forecast weather  
+WolframAplha - Answer Questions
+```
 
 ## Creator
 - [John Mason](https://github.com/johnmason27)
