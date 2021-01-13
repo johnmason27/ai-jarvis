@@ -43,11 +43,13 @@ To start the assistant, run the python file and enjoy!
 ```
 
 ## In-built libaries to be imported
+```
 - os
 - datetime
 - web browser
 - Json
 - time
+```
 
 ## Third party services used
 Open weather map
