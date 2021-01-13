@@ -34,11 +34,11 @@ To start the assistant, run the python file and enjoy!
 `Human: Hey Jarvis, shut down/log off/restart my pc.`
 
 ## Libaries required to be installed via Pip
-`- request
-- Speech recognition
-- Pyttsx3
-- Wikipedia
-- Wolfram Aplha`
+```- request  
+- Speech recognition  
+- Pyttsx3  
+- Wikipedia  
+- Wolfram Aplha```
 
 ## In-built libaries to be imported
 `- os
