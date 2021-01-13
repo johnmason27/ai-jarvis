@@ -60,4 +60,4 @@ WolframAplha - Answer Questions
 ```
 
 ## Creator
-- [John Mason](https://github.com/johnmason27)
+[John Mason](https://github.com/johnmason27)
