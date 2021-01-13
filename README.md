@@ -2,7 +2,7 @@
 Voice assistant for automating tasks. University project for my final project.
 Allows you to talk via voice to the assistant and perform a range of tasks.
 
-![Computer Speech]("https://i.kinja-img.com/gawker-media/image/upload/t_original/yx5p543lkwbtgqomlooo.gif")
+![Computer Speech](speech.gif)
 
 ## Usage
 To start the assistant, run the python file and enjoy!
@@ -52,7 +52,7 @@ To start the assistant, run the python file and enjoy!
 ```
 
 ## Third party services used
-Open weather map
+Open weather map  
 WolframAplha
 
 ## Creator
