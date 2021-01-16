@@ -1,3 +1,8 @@
+# Final Project
+# Name: John Mason
+# Student No: 2034708
+# Personal virtual assistant for automating tasks and speeding up daily processes.
+# -----------------------------------
 from services.internet_service import InternetService
 from services.api_call_service import ApiCallService
 from services.general_service import GeneralService
@@ -5,6 +10,7 @@ from services.file_service import FileService
 from services.os_service import OSService
 from assistant_logic.assistant import Assistant
 
+# Program dependencies
 assistant = Assistant()
 os_service = OSService()
 internet_service = InternetService()
@@ -13,10 +19,12 @@ file_service = FileService("./appsettings.json")
 appsettings = file_service.read_appsettings()
 api_call_service = ApiCallService(appsettings["WeatherApiKey"], appsettings["WeatherApiUrl"], appsettings["WolframalphaApiKey"])
 
+# Startup
 print("Loading your AI personal assistant Jarvis")
 assistant.speak("Loading your AI personal assistant Jarvis")
 assistant.wish_me()
 
+# Main logic
 if __name__ == "__main__":
     while True:
         assistant.speak("Tell me how I help you now?")

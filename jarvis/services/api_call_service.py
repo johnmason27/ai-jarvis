@@ -5,7 +5,13 @@ from assistant_logic.assistant import Assistant
 from services.general_service import GeneralService
 
 class ApiCallService:
+    '''
+        Houses all logic for calling the third party API's.
+    '''
     def __init__(self, weather_api_key, weather_api_url, wolframalpha_api_key):
+        '''
+            Setup for API keys and url from appsettings and other dependencies.
+        '''
         self.weather_api_key = weather_api_key
         self.weather_api_url = weather_api_url
         self.wolframalpha_api_key = wolframalpha_api_key
@@ -13,6 +19,9 @@ class ApiCallService:
         self.general_service = GeneralService()
 
     def forecast_weather(self):
+        '''
+            Forecast weather using the openweathermap api.
+        '''
         self.assistant.speak("What is the city name")
         city_name = self.assistant.take_command()
         complete_url = self.weather_api_url + "appid=" + self.weather_api_key + "&q=" + city_name
@@ -35,6 +44,10 @@ class ApiCallService:
         time.sleep(1)
 
     def call_wolframalpha(self):
+        '''
+            Respond to questions about computational and geographical questions using
+            the wolframalpha api.
+        '''
         self.assistant.speak("I can answer to computational and geographical questions and what question do you want to ask now?")
         print("I can answer to computational and geographical questions and what question do you want to ask now?")
         question = self.assistant.take_command()
