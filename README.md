@@ -35,6 +35,9 @@ To start the assistant, run the python file and enjoy!
 8. Perform OS tasks such as log off, shut down and restart:  
 `Human: Hey Jarvis, shut down/log off/restart my pc.`
 
+9. Tell a joke:
+`Human: Hey Jarvis, tell me a joke!`
+
 ## Libaries required to be installed via Pip
 ```
 1. request  
@@ -51,6 +54,7 @@ To start the assistant, run the python file and enjoy!
 3. web browser
 4. Json
 5. time
+6. random
 ```
 
 ## Third party services used

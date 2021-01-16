@@ -76,3 +76,5 @@ if __name__ == "__main__":
             os_service.rsl_action("r", "restart")
         elif "ask" in statement:
             api_call_service.call_wolframalpha()
+        elif "joke" in statement:
+            general_service.tell_joke()
