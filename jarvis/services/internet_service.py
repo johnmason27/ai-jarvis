@@ -37,11 +37,11 @@ class InternetService:
         search_query = ""
         statement = statement.split()
 
-        for x in range(len(statement)):
-            if x == 0:
-                search_query += statement[x]
+        for item in range(len(statement)):
+            if item == 0:
+                search_query += statement[item]
             else:
-                search_query += "+" + statement[x]
+                search_query += "+" + statement[item]
 
         webbrowser.open_new_tab(f"https://www.bing.com/search?q={search_query}")
         self.assistant.speak("Website is open")
