@@ -38,6 +38,9 @@ To start the assistant, run the python file and enjoy!
 9. Tell a joke:  
 `Human: Hey Jarvis, tell me a joke!`
 
+10. Sing music:  
+`Human: Hey Jarvis, play music! Jarvis: Whats's the name of the artist? Human: Ed Sheeran Jarvis: What's the name of the track? Human: Sing`
+
 ## Libaries required to be installed via Pip
 ```
 1. request  
@@ -61,6 +64,7 @@ To start the assistant, run the python file and enjoy!
 ```
 Open weather map - Forecast weather  
 WolframAplha - Answer Questions
+MusixmatchApi - Get music lyrics
 ```
 
 ## Creator

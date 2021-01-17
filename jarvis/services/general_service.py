@@ -46,10 +46,14 @@ class GeneralService:
         '''
             Tell a joke to the user via speech and text.
         '''
+        # Tell Joke
         joke = random.choices(self.joke_list)
         self.assistant.speak(joke[0][0])
         print(joke[0][0])
+
         time.sleep(1.5)
+
+        # Tell answer
         self.assistant.speak(joke[0][1])
         print(joke[0][1])
         time.sleep(1)
