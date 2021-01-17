@@ -49,6 +49,9 @@ To start the assistant, run the python file and enjoy!
 4. Wikipedia  
 5. Wolfram Aplha
 ```
+If you are having issues with "pyaudio", try these steps:
+1. pip install pipwin
+2. pipwin install pyaudio
 
 ## In-built libaries to be imported
 ```
