@@ -64,6 +64,7 @@ To start the assistant, run the python file and enjoy!
 ```
 Open weather map - Forecast weather  
 WolframAplha - Answer Questions
+MusixmatchApi - Get music lyrics
 ```
 
 ## Creator
