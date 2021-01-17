@@ -17,6 +17,12 @@ class FileService:
             Returns:
                 appsettings: dictionary, containing the appsettings.
         '''
-        with open(self.filepath, "r") as file_content:
-            appsettings = json.load(file_content)
+        try:
+            with open(self.filepath, "r") as file_content:
+                appsettings = json.load(file_content)
+        except FileNotFoundError:
+            print("Failed, file not found.")
+        except PermissionError:
+            print("Failed, file permissions error.")
+            
         return appsettings

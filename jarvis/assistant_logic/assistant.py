@@ -59,7 +59,7 @@ class Assistant:
                 statement = r.recognize_google(audio, language="en-in")
                 print(f"User said: {statement}\n")
             except Exception:
-                self.speak("Excuse me, I didn't catch that, please repeat what you said.")
+                self.speak("Excuse me, I didn't catch that.")
                 return "None"
                 
             return statement

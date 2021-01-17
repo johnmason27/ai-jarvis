@@ -8,6 +8,7 @@ from services.api_call_service import ApiCallService
 from services.general_service import GeneralService
 from services.file_service import FileService
 from services.os_service import OSService
+from services.music_service import MusicService
 from assistant_logic.assistant import Assistant
 
 # Program dependencies
@@ -18,6 +19,7 @@ general_service = GeneralService()
 file_service = FileService("./appsettings.json")
 appsettings = file_service.read_appsettings()
 api_call_service = ApiCallService(appsettings["WeatherApiKey"], appsettings["WeatherApiUrl"], appsettings["WolframalphaApiKey"])
+music_service = MusicService(appsettings["MusixmatchApiKey"])
 
 # Startup
 print("Loading your AI personal assistant Jarvis")
@@ -78,3 +80,5 @@ if __name__ == "__main__":
             api_call_service.call_wolframalpha()
         elif "joke" in statement:
             general_service.tell_joke()
+        elif "music" in statement:
+            music_service.sing_song_segment()
