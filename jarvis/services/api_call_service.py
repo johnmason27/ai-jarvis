@@ -8,12 +8,11 @@ class ApiCallService:
     '''
         Houses all logic for calling the third party API's.
     '''
-    def __init__(self, weather_api_key, weather_api_url, wolframalpha_api_key):
+    def __init__(self, weather_api_key, wolframalpha_api_key):
         '''
-            Setup for API keys and url from appsettings and other dependencies.
+            Setup for API keys from appsettings and other dependencies.
         '''
         self.weather_api_key = weather_api_key
-        self.weather_api_url = weather_api_url
         self.wolframalpha_api_key = wolframalpha_api_key
         self.assistant = Assistant()
         self.general_service = GeneralService()
@@ -24,7 +23,7 @@ class ApiCallService:
         '''
         self.assistant.speak("What is the city name")
         city_name = self.assistant.take_command()
-        complete_url = self.weather_api_url + "appid=" + self.weather_api_key + "&q=" + city_name
+        complete_url = "https://api.openweathermap.org/data/2.5/weather?" + "appid=" + self.weather_api_key + "&q=" + city_name
         response = requests.get(complete_url)
         response_dic = response.json()
 

@@ -18,7 +18,7 @@ internet_service = InternetService()
 general_service = GeneralService()
 file_service = FileService("./appsettings.json")
 appsettings = file_service.read_appsettings()
-api_call_service = ApiCallService(appsettings["WeatherApiKey"], appsettings["WeatherApiUrl"], appsettings["WolframalphaApiKey"])
+api_call_service = ApiCallService(appsettings["WeatherApiKey"], appsettings["WolframalphaApiKey"])
 music_service = MusicService(appsettings["MusixmatchApiKey"])
 
 # Startup
