@@ -18,7 +18,7 @@ internet_service = InternetService()
 general_service = GeneralService()
 file_service = FileService("./appsettings.json")
 appsettings = file_service.read_appsettings()
-api_call_service = ApiCallService(appsettings["WeatherApiKey"], appsettings["WeatherApiUrl"], appsettings["WolframalphaApiKey"])
+api_call_service = ApiCallService(appsettings["WeatherApiKey"], appsettings["WolframalphaApiKey"])
 music_service = MusicService(appsettings["MusixmatchApiKey"])
 
 # Startup
@@ -29,7 +29,7 @@ assistant.wish_me()
 # Main logic
 if __name__ == "__main__":
     while True:
-        assistant.speak("Tell me how I help you now?")
+        assistant.speak("How can I help you now?")
         statement = assistant.take_command().lower()
         
         if statement == 0:
