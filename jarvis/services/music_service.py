@@ -9,8 +9,7 @@ class MusicService:
     '''
     def __init__(self, key):
         '''
-            Setup the dependencies.
-
+            Setup the dependencies.  
             Args:
                 key: string, music api key.
         '''
@@ -19,11 +18,9 @@ class MusicService:
 
     def get_input(self, question):
         '''
-            Get the input from the user.
-
+            Get the input from the user.  
             Args:
-                question: string, quesiton to ask.
-            
+                question: string, quesiton to ask.  
             Returns:
                 statement: string, user input.
         '''
@@ -52,6 +49,7 @@ class MusicService:
 
         api_call = "https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=json&callback=callback&q_artist=" + artist_name + "&q_track=" + track_name + self.api_key
         
+        # Perform the API call and speak/print data.
         try:
             request = requests.get(api_call)
             data = request.json()

@@ -14,8 +14,7 @@ class OSService:
     def rsl_action(self, action, action_name):
         '''
             Perform an action such as shutdown, log off or restart depending on the
-            given in arguements.
-
+            given in arguements.  
             Args:
                 action: string, l/r/s action for the system to do.
                 action_name: string, action name.

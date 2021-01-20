@@ -41,11 +41,14 @@ To start the assistant, run the python file and enjoy!
 10. Sing music:  
 `Human: Hey Jarvis, play music! Jarvis: Whats's the name of the artist? Human: Ed Sheeran Jarvis: What's the name of the track? Human: Sing`
 
-11. Repeat what you say:  
+11. Repeat what you say:
 `Human: Hey Jarvis, Simon says... Jarvis: What does simon say? Human: Jarvis smells.`
 
-12. Simon says game:  
+12. Simon says game:
 `Human: Hey Jarvis, I want to play a game.`
+
+13. Play a quiz:
+`Human: Hey Jarvis, I want to play a quiz.`
 
 ## Libaries required to be installed via Pip
 ```

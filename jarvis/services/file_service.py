@@ -12,8 +12,7 @@ class FileService:
 
     def read_appsettings(self):
         '''
-            Reads the appsettings for use in the program.
-
+            Reads the appsettings for use in the program.  
             Returns:
                 appsettings: dictionary, containing the appsettings.
         '''
