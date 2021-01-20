@@ -4,21 +4,21 @@ Allows you to talk via voice to the assistant and perform a range of tasks.
 
 <p align="center">
     <p align="center">###############</p>     
-    <p>##           ##</p>     
-    <p>#  ~~     ~~  #</p>     
-    <p>#  ()     ()  #</p>     
-    <p>(      ^      )</p>     
-     <p>|           |</p>      
-     <p>|  {=====}  |</p>     
-      <p>\         /</p>      
-     <p>/  -------  \</p>    
-   <p>--- |%\   /%| ---</p>   
- <p>/     |%%%%&%%|    \</p>  
-<p>|      |%/   \%|     |</p>  
-<p>|                    |</p> 
-<p>|         ()         |</p>   
-<p>|                    |</p>   
-<p>|         ()         |</p>
+    <p align="center">##           ##</p>     
+    <p align="center">#  ~~     ~~  #</p>     
+    <p align="center">#  ()     ()  #</p>     
+    <p align="center">(      ^      )</p>     
+     <p align="center">|           |</p>      
+     <p align="center">|  {=====}  |</p>     
+      <p align="center">\         /</p>      
+     <p align="center">/  -------  \</p>    
+   <p align="center">--- |%\   /%| ---</p>   
+ <p align="center">/     |%%%%&%%|    \</p>  
+<p align="center">|      |%/   \%|     |</p>  
+<p align="center">|                    |</p> 
+<p align="center">|         ()         |</p>   
+<p align="center">|                    |</p>   
+<p align="center">|         ()         |</p>
   <img width="200" src="speech.gif" alt="Material Bread logo">
 </p>
                            
