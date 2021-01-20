@@ -3,7 +3,7 @@ Voice assistant for automating tasks. University project for my final project.
 Allows you to talk via voice to the assistant and perform a range of tasks.
 
 <p align="center">
-    <p>###############</p>     
+    <p align="center">###############</p>     
     <p>##           ##</p>     
     <p>#  ~~     ~~  #</p>     
     <p>#  ()     ()  #</p>     
