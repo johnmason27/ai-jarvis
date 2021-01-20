@@ -9,8 +9,7 @@ class MusicService:
     '''
     def __init__(self, key):
         '''
-            Setup the dependencies.
-
+            Setup the dependencies.  
             Args:
                 key: string, music api key.
         '''
@@ -19,11 +18,9 @@ class MusicService:
 
     def get_input(self, question):
         '''
-            Get the input from the user.
-
+            Get the input from the user.  
             Args:
-                question: string, quesiton to ask.
-            
+                question: string, quesiton to ask.  
             Returns:
                 statement: string, user input.
         '''

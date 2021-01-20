@@ -17,8 +17,7 @@ class Assistant:
 
     def speak(self, text):
         '''
-            AI will speak to the user what ever text is passed in.
-
+            AI will speak to the user what ever text is passed in.  
             Args:
                 text: string, text to speak.
         '''
@@ -43,9 +42,8 @@ class Assistant:
 
     def take_command(self):
         '''
-            Listens to the user when called and using the google voice API
-            it will produce a string containing the command.
-            
+            Listens to the user when called and using the google voice API  
+            it will produce a string containing the command.  
             Returns:
                 statement: string, user's command.
         '''

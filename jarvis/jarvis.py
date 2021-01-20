@@ -10,6 +10,7 @@ from services.file_service import FileService
 from services.os_service import OSService
 from services.music_service import MusicService
 from services.simon_says_service import SimonSaysService
+from services.quiz_service import QuizService
 from assistant_logic.assistant import Assistant
 
 # Program dependencies
@@ -18,6 +19,7 @@ os_service = OSService()
 internet_service = InternetService()
 general_service = GeneralService()
 simon_says_service = SimonSaysService()
+quiz_service = QuizService()
 file_service = FileService("./appsettings.json")
 appsettings = file_service.read_appsettings()
 api_call_service = ApiCallService(appsettings["WeatherApiKey"], appsettings["WolframalphaApiKey"])
@@ -88,3 +90,5 @@ if __name__ == "__main__":
             simon_says_service.mirror_me()
         elif "game" in statement:
             simon_says_service.simon_says_game()
+        elif "quiz" in statement:
+            quiz_service.play_quiz()

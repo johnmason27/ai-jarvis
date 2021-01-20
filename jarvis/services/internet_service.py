@@ -15,8 +15,7 @@ class InternetService:
 
     def open_tab(self, url, website_name):
         '''
-            Open a new tab for the user.
-
+            Open a new tab for the user.  
             Args:
                 url: string, url search string.
                 website_name: string, website name.
@@ -28,8 +27,7 @@ class InternetService:
     
     def search_web(self, statement):
         '''
-            Open a new browser based of the statement given by the user.
-
+            Open a new browser based of the statement given by the user.  
             Args:
                 statement: string, user command.
         '''
@@ -50,8 +48,7 @@ class InternetService:
 
     def search_wikipedia(self, statement):
         '''
-            Search wikipedia based off the user statement.
-
+            Search wikipedia based off the user statement.  
             Args:
                 statement: string, user command.
         '''

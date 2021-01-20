@@ -22,11 +22,9 @@ class GeneralService:
 
     def convert_temperature(self, current_temperature):
         '''
-            Converts temperature from kelvin units to celsius units.
-
+            Converts temperature from kelvin units to celsius units.  
             Args:
                 current_temperature: integer, temperature in kelvin.
-
             Returns:
                 current_temperature: integer, temperature in celsius.
         '''

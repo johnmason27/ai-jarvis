@@ -22,10 +22,13 @@ class SimonSaysService:
         '''
             Repeat whatever the user says.
         '''
-        self.assistant.speak("What does Simon say?")
-        print("What does Simon say?")
+        while True:
+            self.assistant.speak("What does Simon say?")
+            print("What does Simon say?")
+            command = self.assistant.take_command()
 
-        command = self.assistant.take_command()
+            if command != "None":
+                break
 
         self.assistant.speak("Simon says, " + command)
         print("Simon says, " + command)
@@ -34,7 +37,7 @@ class SimonSaysService:
 
     def simon_says_game(self):
         '''
-            Simon says game. Tasks give at random to perform 10 times.
+            Simon says game. Tasks give at random to perform 10 times.  
             If the command doesn't have simon says at the front you shouldn't
             complete the task and visversa. 
         '''
