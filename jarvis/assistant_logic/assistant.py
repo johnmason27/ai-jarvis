@@ -53,6 +53,7 @@ class Assistant:
             print("Listening...")
             audio = r.listen(source)
 
+            # Get voice.
             try:
                 statement = r.recognize_google(audio, language="en-in")
                 print(f"User said: {statement}\n")

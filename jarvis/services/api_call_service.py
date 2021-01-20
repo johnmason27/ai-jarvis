@@ -27,6 +27,7 @@ class ApiCallService:
         response = requests.get(complete_url)
         response_dic = response.json()
 
+        # Print data.
         if response_dic["cod"] != "404":
             data = response_dic["main"]
             current_temperature = data["temp"]
@@ -51,6 +52,7 @@ class ApiCallService:
         print("I can answer to computational and geographical questions and what question do you want to ask now?")
         question = self.assistant.take_command()
 
+        # Call and fetch data.
         try:
             client = wolframalpha.Client(self.wolframalpha_api_key)
             res = client.query(question)

@@ -35,6 +35,7 @@ class InternetService:
         search_query = ""
         statement = statement.split()
 
+        # Create the query string.
         for item in range(len(statement)):
             if item == 0:
                 search_query += statement[item]
@@ -55,6 +56,7 @@ class InternetService:
         self.assistant.speak("Searching Wikipedia...")
         print("Searching Wikipedia...")
 
+        # Fetch wikipedia data.
         try:
             statement = statement.replace("wikipedia", "")
             results = wikipedia.summary(statement, sentences = 3)

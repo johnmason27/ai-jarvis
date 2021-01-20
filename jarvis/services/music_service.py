@@ -49,6 +49,7 @@ class MusicService:
 
         api_call = "https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=json&callback=callback&q_artist=" + artist_name + "&q_track=" + track_name + self.api_key
         
+        # Perform the API call and speak/print data.
         try:
             request = requests.get(api_call)
             data = request.json()

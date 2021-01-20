@@ -41,10 +41,12 @@ class SimonSaysService:
             If the command doesn't have simon says at the front you shouldn't
             complete the task and visversa. 
         '''
+        # Perform 10 rounds
         for round in range(10):
             simon_command = random.choices(self.simon_commands)
             command = random.choices(self.game_commands)
 
+            # Print and speak new command.
             if simon_command[0] != "":
                 self.assistant.speak(simon_command[0] + " " + command[0])
                 print(simon_command[0] + " " + command[0])

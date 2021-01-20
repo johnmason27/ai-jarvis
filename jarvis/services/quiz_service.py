@@ -48,12 +48,14 @@ class QuizService:
         previous_questions = []
         score = 0
 
+        # Perform each round.
         for round in range(5):
-            self.assistant.speak("Round", round + 1)
-            print("Round", round + 1)
+            self.assistant.speak(f"Round {round + 1}")
+            print(f"Round {round + 1}")
             running = True
             exists = True
 
+            # Get the question from the list.
             while running:
                 random_question = random.choices(self.questions)
 
@@ -68,6 +70,7 @@ class QuizService:
             print(random_question[0][0])
             time.sleep(10)
 
+            # Get the user answer.
             while True:
                 self.assistant.speak("What is your answer?")
                 print("What is your answer?")
@@ -75,7 +78,8 @@ class QuizService:
 
                 if statement != "None":
                     break
-
+            
+            # Check the answer is correct or not.
             if statement.lower() in random_question[0][1]:
                 print("Correct")
                 self.assistant.speak("Correct")
@@ -86,13 +90,17 @@ class QuizService:
 
             time.sleep(1)
         
+        # Final score and exit.
+        print("Quiz Complete!")
         self.assistant.speak("Quiz Complete!")
+        
+        print("Drum role please...")
         self.assistant.speak("Drum role please...")
+
+        print(f"Your final score is, {score} points!")
         self.assistant.speak(f"Your final score is, {score} points!")
+
+        print("Welldone and thanks for playing!")
         self.assistant.speak("Welldone thanks for playing!")
 
-        print("Quiz Complete!")
-        print("Drum role please...")
-        print(f"Your final score is, {score} points!")
-        print("Welldone and thanks for playing!")
         time.sleep(1)
