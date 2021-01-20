@@ -30,6 +30,26 @@ print("Loading your AI personal assistant Jarvis")
 assistant.speak("Loading your AI personal assistant Jarvis")
 assistant.wish_me()
 
+print("\n     ###############     ")
+print("     ##           ##     ")
+print("     #  ~~     ~~  #     ")
+print("     #  ()     ()  #     ")
+print("     (      ^      )     ")
+print("      |           |      ")
+print("      |  {=====}  |      ")
+print("       \         /       ")
+print("      /  -------  \      ")
+print("    --- |%\   /%| ---    ")
+print("  /     |%%%%&%%|    \   ")
+print(" |      |%/   \%|     |  ") 
+print(" |                    |  ")
+print(" |         ()         |  ") 
+print(" |                    |  ") 
+print(" |         ()         |\n")  
+
+print("Fully loaded!")
+assistant.speak("Fully loaded!")
+
 # Main logic
 if __name__ == "__main__":
     while True:
@@ -38,7 +58,7 @@ if __name__ == "__main__":
         
         if statement == 0:
             continue
-
+        
         if "goodbye" in statement or "ok bye" in statement or "stop" in statement or "shut down" in statement:
             assistant.speak("Your personal assistant Jarvis is shutting down, Goodbye")
             print("Your personal assistant Jarvis is shutting down, Goodbye")
