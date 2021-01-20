@@ -3,7 +3,13 @@ import random
 from assistant_logic.assistant import Assistant
 
 class SimonSaysService:
+    '''
+        Houses the simon says services.
+    '''
     def __init__(self):
+        '''
+            Setup for the service dependencies.
+        '''
         self.assistant = Assistant()
         self.game_commands = ["Touch your head", "Touch your toes", "Spin around", "Touch your ears", "Touch your ears", "Touch your eyes", "Jump!", "Touch your hair",
             "Do 5 jumping jacks", "Do 5 press ups", "Do 5 situps", "Do 5 Burpees", "Wink with your left eye", "Wink with your right eye", "Walk like a penguin", 
@@ -13,6 +19,9 @@ class SimonSaysService:
         self.simon_commands = ["Simon says", ""]
 
     def mirror_me(self):
+        '''
+            Repeat whatever the user says.
+        '''
         self.assistant.speak("What does Simon say?")
         print("What does Simon say?")
 
@@ -24,6 +33,11 @@ class SimonSaysService:
         time.sleep(1)
 
     def simon_says_game(self):
+        '''
+            Simon says game. Tasks give at random to perform 10 times.
+            If the command doesn't have simon says at the front you shouldn't
+            complete the task and visversa. 
+        '''
         for round in range(10):
             simon_command = random.choices(self.simon_commands)
             command = random.choices(self.game_commands)
@@ -37,8 +51,6 @@ class SimonSaysService:
         
             time.sleep(5)
 
-        self.assistant.speak("Game over! Thanks for playing!\n")
-        print("Game over! Thanks for playing!")
+        self.assistant.speak("Game over! Thanks for playing!")
+        print("\nGame over! Thanks for playing!")
         time.sleep(1)
-
-    # Add quiz too
