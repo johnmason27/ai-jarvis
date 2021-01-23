@@ -58,6 +58,7 @@ class InternetService:
 
         # Fetch wikipedia data.
         try:
+            # Get rid of the word wikipedia in the statement.
             statement = statement.replace("wikipedia", "")
             results = wikipedia.summary(statement, sentences = 3)
             self.assistant.speak("According to Wikipedia")

@@ -18,6 +18,7 @@ class FileService:
         '''
         try:
             with open(self.filepath, "r") as file_content:
+                # Turn Json into dictionary.
                 appsettings = json.load(file_content)
         except FileNotFoundError:
             print("Failed, file not found.")

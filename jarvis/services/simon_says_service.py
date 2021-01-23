@@ -22,6 +22,7 @@ class SimonSaysService:
         '''
             Repeat whatever the user says.
         '''
+        # Get the user command to mirror and repeat if they don't say anything.
         while True:
             self.assistant.speak("What does Simon say?")
             print("What does Simon say?")
@@ -30,6 +31,7 @@ class SimonSaysService:
             if command != "None":
                 break
 
+        # Speak what they say.
         self.assistant.speak("Simon says, " + command)
         print("Simon says, " + command)
 
@@ -41,8 +43,9 @@ class SimonSaysService:
             If the command doesn't have simon says at the front you shouldn't
             complete the task and visversa. 
         '''
-        # Perform 10 rounds
+        # Perform 10 rounds.
         for round in range(10):
+            # Get a random game command and random start of command.
             simon_command = random.choices(self.simon_commands)
             command = random.choices(self.game_commands)
 

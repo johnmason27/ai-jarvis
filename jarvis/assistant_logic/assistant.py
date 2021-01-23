@@ -30,6 +30,7 @@ class Assistant:
         '''
         hour = datetime.datetime.now().hour
 
+        # Check the time of day.
         if hour >= 0 and hour < 12:
             self.speak("Hello, Good Morning")
             print("Hello, Good Morning")
@@ -53,7 +54,7 @@ class Assistant:
             print("Listening...")
             audio = r.listen(source)
 
-            # Get voice.
+            # Get user statement.
             try:
                 statement = r.recognize_google(audio, language="en-in")
                 print(f"User said: {statement}\n")
