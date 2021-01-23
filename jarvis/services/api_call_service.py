@@ -23,12 +23,14 @@ class ApiCallService:
         '''
         self.assistant.speak("What is the city name")
         city_name = self.assistant.take_command()
+        # Create the API request.
         complete_url = "https://api.openweathermap.org/data/2.5/weather?" + "appid=" + self.weather_api_key + "&q=" + city_name
         response = requests.get(complete_url)
         response_dic = response.json()
 
-        # Print data.
+        # Check if the response is bad.
         if response_dic["cod"] != "404":
+            # Extract response and print out.
             data = response_dic["main"]
             current_temperature = data["temp"]
             current_temperature = self.general_service.convert_temperature(current_temperature)

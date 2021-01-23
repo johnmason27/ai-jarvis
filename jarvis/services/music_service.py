@@ -24,6 +24,7 @@ class MusicService:
             Returns:
                 statement: string, user input.
         '''
+        # Ask for input and ask again if nothing is returned.
         while True:
             self.assistant.speak(question)
             print(question)
@@ -47,12 +48,14 @@ class MusicService:
         self.assistant.speak("Loading music...")
         print("Loading music...")
 
+        # Create API request.
         api_call = "https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=json&callback=callback&q_artist=" + artist_name + "&q_track=" + track_name + self.api_key
         
-        # Perform the API call and speak/print data.
+        # Perform the API call.
         try:
             request = requests.get(api_call)
             data = request.json()
+            # Extract the data from reponse and print/speak.
             data = data['message']['body']
             data['lyrics']['lyrics_body'] = data['lyrics']['lyrics_body'].replace("\n...\n\n******* This Lyrics is NOT for Commercial use *******", "")
             self.assistant.speak(f"Playing {track_name} by {artist_name}")

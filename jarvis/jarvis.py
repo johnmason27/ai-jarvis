@@ -53,17 +53,21 @@ assistant.speak("Fully loaded!")
 # Main logic
 if __name__ == "__main__":
     while True:
+        # Ask the user for their command.
         assistant.speak("How can I help you now?")
         statement = assistant.take_command().lower()
         
+        # Ask again if the user doesn't respond.
         if statement == 0:
             continue
         
+        # Shutting down the assistant.
         if "goodbye" in statement or "ok bye" in statement or "stop" in statement or "shut down" in statement:
             assistant.speak("Your personal assistant Jarvis is shutting down, Goodbye")
             print("Your personal assistant Jarvis is shutting down, Goodbye")
             break
 
+        # Assistant tasks, task gets selected based off what the user says.
         if "wikipedia" in statement:
             internet_service.search_wikipedia(statement)
         elif "open youtube" in statement:
